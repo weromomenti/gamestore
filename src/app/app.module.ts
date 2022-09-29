@@ -19,7 +19,6 @@ import { GameComponent } from './games/components/games.component';
     CommunityComponent,
     SupportComponent,
     NavbarComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -28,8 +27,7 @@ import { GameComponent } from './games/components/games.component';
   providers: [],
   bootstrap: [
     AppComponent,
-    NavbarComponent,
-    GameComponent
+    NavbarComponent
   ]
 })
 export class AppModule { }
