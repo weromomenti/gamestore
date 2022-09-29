@@ -103,35 +103,3 @@ li > h3 {
     margin:0;
     padding: 0;
 }
-.details-tag{
-    display: inline;
-    position: absolute;
-    bottom: 0px;
-    padding:0px;
-    width: 240px;
-    height: 100px;
-    background-color:rgba(29, 29, 29, 0.5);
-}
-.price-tag {
-    font-size: 30px;
-    margin:10px;
-    max-width: 180px;
-}
-.buy-button {
-    position: absolute;
-    right: 10px;
-    top:10px;
-    height: 35px;
-    width: 70px;
-    color: black;
-    background-color: green;
-    border-radius: 5px;
-    border: none;
-}
-.game-title {
-    white-space: nowrap;
-    margin: 10px;
-    overflow: hidden;
-    max-height: 30px;
-    text-overflow:ellipsis;
-}
