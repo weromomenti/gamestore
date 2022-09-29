@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +8,8 @@ import { SinginComponent } from './singin/singin.component';
 import { CommunityComponent } from './community/community.component';
 import { SupportComponent } from './support/support.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { GameComponent } from './games/components/games.component';
+import { HomeModule } from './home/home.module';
+import { GamesComponent } from './games/components/games.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,15 @@ import { GameComponent } from './games/components/games.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [
     AppComponent,
-    NavbarComponent
-  ]
+    NavbarComponent,
+    GamesComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

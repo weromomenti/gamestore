@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameComponent } from '../games/components/games.component';
-
+import { GamesComponent } from '../games/components/games.component';
 
 @NgModule({
-  declarations: [GameComponent],
+  declarations: [GamesComponent],
   imports: [
     CommonModule
   ]
