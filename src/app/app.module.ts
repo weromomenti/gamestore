@@ -1,21 +1,18 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { SinginComponent } from './singin/singin.component';
-import { CommunityComponent } from './community/community.component';
-import { SupportComponent } from './support/support.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeModule } from './home/home.module';
-import { GamesComponent } from './games/components/games.component';
+import { AboutComponent } from './components/about/about.component';
+import { SinginComponent } from './components/singin/singin.component';
+import { CommunityComponent } from './components/community/community.component';
+import { SupportComponent } from './components/support/support.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeModule } from './components/home/home.module';
+import { EditGameComponent } from './components/edit-game/edit-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
     SinginComponent,
     CommunityComponent,
     SupportComponent,
@@ -29,9 +26,7 @@ import { GamesComponent } from './games/components/games.component';
   providers: [],
   bootstrap: [
     AppComponent,
-    NavbarComponent,
-    GamesComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    NavbarComponent
+  ]
 })
 export class AppModule { }

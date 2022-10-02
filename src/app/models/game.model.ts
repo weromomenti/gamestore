@@ -2,9 +2,9 @@ export interface Game {
      id : number;
      PEGIRatingID: number;
      name : string;
-     description : string;
+     description: string;
      price : number;
      image : string;
      genreIds : number[];
-     commendIds : number[];
+     commentIds: number[];
 }

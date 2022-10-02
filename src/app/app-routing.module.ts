@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { SinginComponent } from './singin/singin.component';
+import { AboutComponent } from './components/about/about.component';
+import { CommunityComponent } from './components/community/community.component';
+import { GameDetailsComponent } from './components/details/game-details.component';
+import { HomeComponent } from './components/home/home.component';
+import { SinginComponent } from './components/singin/singin.component';
+import { SupportComponent } from './components/support/support.component';
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "home",  component: HomeComponent },
+  { path: "home/:id", component: GameDetailsComponent },
+  { path: "", redirectTo: "home", pathMatch: "full"},
+  { path: "community", component: CommunityComponent},
   { path: "about", component: AboutComponent},
-
-  { path: "signin", component: SinginComponent}
-
+  { path: "signin", component: SinginComponent},
+  { path: "support", component: SupportComponent}
 ];
 
 @NgModule({

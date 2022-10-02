@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from '../models/game.model';
-//import { GameService } from '../services/game.service';
+import { Game } from '../../models/game.model';
+import { GamesService } from 'src/app/services/games.service';
 
 @Component({
   selector: 'app-games',
@@ -11,14 +11,14 @@ export class GamesComponent implements OnInit {
 
   allGames?: Game[];
 
-  constructor(/*private gameService : GameService*/) { }
+  constructor(private gameService : GamesService) { }
 
   getAllGames() {
-    //return this.gameService.getAllGames().subscribe(games => this.allGames = games);
+    return this.gameService.getAllGames().subscribe((games: Game[]) => this.allGames = games);
   }
 
   ngOnInit(): void {
-    //this.getAllGames();
+    this.getAllGames();
   }
 
 }
