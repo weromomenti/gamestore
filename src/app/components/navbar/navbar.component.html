@@ -15,6 +15,6 @@
       <h3><a routerLink="/support">Support</a></h3>
     </div>
 
-    <a class="login" routerLink="/signin">Sign in</a>
+    <a class="login" routerLink="/signin" *ngIf="!this.userService.isLoggedIn()">Sign in</a>
   </div>
 </nav>

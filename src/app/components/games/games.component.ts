@@ -9,7 +9,7 @@ import { GamesService } from 'src/app/services/games.service';
 })
 export class GamesComponent implements OnInit {
 
-  allGames?: Game[];
+  allGames: Game[];
 
   constructor(private gameService : GamesService) { }
 

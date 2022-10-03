@@ -9,6 +9,9 @@ import { SupportComponent } from './components/support/support.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeModule } from './components/home/home.module';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
+import { UserService } from './services/user.service';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,16 @@ import { EditGameComponent } from './components/edit-game/edit-game.component';
     SinginComponent,
     CommunityComponent,
     SupportComponent,
-    NavbarComponent,
+    NavbarComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [
     AppComponent,
     NavbarComponent
