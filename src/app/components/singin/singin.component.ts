@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 export class SinginComponent implements OnInit {
 
   myForm: FormGroup;
-  user: User;
+  user: User = {};
 
   constructor(private fb: FormBuilder, private userService: UserService) { }
 
@@ -24,8 +24,10 @@ export class SinginComponent implements OnInit {
     this.myForm.valueChanges.subscribe(console.log);
   }
   onSubmit() {
+
     this.user.userName = this.myForm.get('userName')?.value;
     this.user.password = this.myForm.get('password')?.value;
-    this.userService.signIn(this.user);
+    this.userService.signIn(this.user).subscribe((result : User) => this.user = result);
+    console.log(this.user.firstName);
   }
 }

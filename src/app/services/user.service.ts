@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { User } from "../models/user.model";
 
 @Injectable()
@@ -10,8 +11,8 @@ export class UserService {
 
     readonly baseUrl = 'https://localhost:7222/api/users';
 
-    signIn(user: User) {
-        this.http.post(this.baseUrl + 'signIn', user)
+    signIn(user: User) : Observable<User> {
+        return this.http.post<User>(this.baseUrl + '/signIn', user);
     }
 
     isLoggedIn() : boolean {
