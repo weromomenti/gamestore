@@ -18,7 +18,7 @@ import { EditGameComponent } from '../edit-game/edit-game.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpClient, GamesService ],
+  providers: [HttpClient, GamesService, GamesComponent],
   exports: [GamesComponent, HomeComponent, GameDetailsComponent]
 })
 export class HomeModule { 

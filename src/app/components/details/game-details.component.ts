@@ -19,8 +19,7 @@ export class GameDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.gameId = this.route.snapshot.paramMap.get('id');
-    console.log(this.gameId);
-    this.gameService.getGameByIdWithDetails(this.gameId).subscribe((game: Game) => this.game = game);
+    this.gameService.getGameByIdWithDetails(this.gameId).subscribe(result => this.game = result)
   } 
   
 }

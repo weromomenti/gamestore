@@ -7,9 +7,10 @@
     </div>
 
     <div class="search-container">
-      <input type="text" class="search-bar">
-      <i class="fa fa-search"></i>
+      <input type="text" class="search-bar" #searchTerm>
+      <button class="search-button" (click)="onSearch(searchTerm)"><i class="fa fa-search"></i></button>
     </div>
+    <a routerLink="/add"><button>Add Game</button></a>
   </div>
 </div>
 

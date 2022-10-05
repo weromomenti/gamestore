@@ -8,6 +8,7 @@
               <article class="price-tag">{{game.price}}</article>
               <button class="buy-button">Buy</button>
               <article class="game-title">{{game.name}}</article>
+              <button (click)="onDelete(game.id)">Delete</button>
             </div>
         </div>
       </ng-container>

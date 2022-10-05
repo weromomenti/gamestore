@@ -24,7 +24,6 @@ export class SinginComponent implements OnInit {
     this.myForm.valueChanges.subscribe(console.log);
   }
   onSubmit() {
-
     this.user.userName = this.myForm.get('userName')?.value;
     this.user.password = this.myForm.get('password')?.value;
     this.userService.signIn(this.user).subscribe((result : User) => this.user = result);

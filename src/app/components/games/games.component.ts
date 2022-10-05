@@ -10,13 +10,17 @@ import { GamesService } from 'src/app/services/games.service';
 export class GamesComponent implements OnInit {
 
   allGames: Game[];
+  inited : boolean = false;
 
   constructor(private gameService : GamesService) { }
 
-  getAllGames() {
-    return this.gameService.getAllGames().subscribe((games: Game[]) => this.allGames = games);
+  getAllGames(searchTerm : string = '') {
+    this.gameService.getAllGames(searchTerm).subscribe(result => this.allGames = result);
   }
-
+  onDelete(gameId : any){
+    this.gameService.deleteGame(gameId).subscribe();
+    location.reload();
+  }
   ngOnInit(): void {
     this.getAllGames();
   }

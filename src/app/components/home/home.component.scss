@@ -13,6 +13,7 @@
 }
 .search-bar{
     margin-right: 5px;
+    color:black
 }
 .inner {
     display: flex;
@@ -23,8 +24,13 @@
 .left{
     display: flex;
 }
-
+i {
+    color: white;
+}
 .search-genres {
     display: flex;
     justify-content: center;
+}
+.search-button {
+    background-color: transparent;
 }

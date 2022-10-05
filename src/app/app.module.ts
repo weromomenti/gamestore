@@ -12,6 +12,7 @@ import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { UserService } from './services/user.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddGameComponent } from './components/add-game/add-game.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SinginComponent,
     CommunityComponent,
     SupportComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddGameComponent
 
   ],
   imports: [
